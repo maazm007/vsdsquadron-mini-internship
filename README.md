@@ -13,6 +13,7 @@ The program is based on the RISC-V architecture and uses open-source tools to te
 
 ##  Task 1
 1. Install Ubuntu 20.04 LTS on Oracle Virtual Machine Box
+![Ubuntu and VMBox Installation](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/11c35aff-f587-40f5-a7d2-683dbf0784d4)
 2. Install **RISC-V** [GNU ToolChain](https://github.com/riscv-collab/riscv-gnu-toolchain)  
 ```
 $ git clone https://github.com/riscv/riscv-gnu-toolchain
