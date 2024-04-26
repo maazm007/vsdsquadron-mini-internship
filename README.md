@@ -300,7 +300,7 @@ SRL r16, r14, r2
 BNE r0, r1, 20
 ```
 > * BNE is a branching instruction (B-type) based on conditions. Here BNE specifies the condition that the value stored in r0 != (is not equal to) the value stored in r1. If the condition becomes true, Program Counter will be updated by PC + 20, else PC + 4 for next instruction.  
-> *Opcode for BNE = 1100011  
+> * Opcode for BNE = 1100011  
 > rs1 = r0 = 00000  
 > rs2 = r1 = 00001  
 > imm[12:1] = 20 = 000000010100
