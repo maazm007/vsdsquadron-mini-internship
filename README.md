@@ -312,7 +312,7 @@ BNE r0, r1, 20
 ```
 BEQ r0, r0, 15
 ```
-> * BEQ is a branching instruction (B-type) based on conditions. Here BEQ specifies the condition that the value stored in r0 == (is equal to) the value stored in r0. If the condition becomes true, Program Counter will be updated by PC + 20, else PC + 4 for next instruction.  
+> * BEQ is a branching instruction (B-type) based on conditions. Here BEQ specifies the condition that the value stored in r0 == (is equal to) the value stored in r0. If the condition becomes true, Program Counter will be updated by PC + 15, else PC + 4 for next instruction.  
 > * Opcode for BEQ = 1100011  
 > rs1 = r0 = 00000  
 > rs2 = r0 = 00000  
