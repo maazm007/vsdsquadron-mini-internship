@@ -258,10 +258,10 @@ ADDI r12, r4, 5
 ```
 > * In this instruction ADD means Addition, I means Immediate, therefore ADDI means Addition with Immediate, hence this instruction belongs to I-type instruction set.  
 > * r12 is the destination register that will store the value of r5 sum-up with the immediate value 5.
-> * Opcode for ADDI = 0010011
+> * Opcode for ADDI = 0010011  
 > rd = r12 = 01100  
 > rs1 = r4 = 00100  
-> imm[11:0] = 5 = 000000000101
+> imm[11:0] = 5 = 000000000101  
 > func3 = 000  
 
 **32 bits instruction :** ```000000000000101_00100_000_01100_0010011```
@@ -272,8 +272,8 @@ SW r3, r1, 2
 ```
 > * In this instruction SW means store word, hence this instruction belongs to S-type instruction set.  
 > * r3 is the source register. This instruction will store the value located in register r3 at the address obtained by adding the immediate address 2 with the address located in register r1.  
-> * Opcode for SW = 0100011
-> rs2 = r3 = 00011
+> * Opcode for SW = 0100011  
+> rs2 = r3 = 00011  
 > rs1 = r1 = 00001  
 > imm[11:0] = 2 = 000000000010  
 > func3 = 010  
@@ -289,7 +289,7 @@ SRL r16, r14, r2
 > * Opcode for SRL = 0110011  
 > rd = r16 = 10000  
 > rs1 = r14 = 01110  
-> rs2 = r2 = 00010
+> rs2 = r2 = 00010  
 > func3 = 101  
 > func7 = 0000000  
 
@@ -303,7 +303,7 @@ BNE r0, r1, 20
 > * Opcode for BNE = 1100011  
 > rs1 = r0 = 00000  
 > rs2 = r1 = 00001  
-> imm[12:1] = 20 = 000000010100
+> imm[12:1] = 20 = 000000010100  
 > func3 = 001  
 
 **32 bits instruction :** ```0_000001_00001_00000_001_0100_0_1100011```  
