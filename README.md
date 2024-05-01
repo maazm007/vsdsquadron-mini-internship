@@ -8,7 +8,7 @@ The program is based on the RISC-V architecture and uses open-source tools to te
 **College:** KIET Group of Institutions  
 **Email ID:** maazms999@gmail.com  
 **GitHub Profile:** [maazm007](https://github.com/maazm007?tab=repositories)  
-**LinkedIN Profile:**[maazm-ece-vlsi](https://www.linkedin.com/in/maazms-ece-vlsi/)
+**LinkedIN Profile:** [maazm-ece-vlsi](https://www.linkedin.com/in/maazms-ece-vlsi/)
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -342,7 +342,7 @@ We have to follow the given steps to compile any **.c** file in our machine:
 	gcc sum_1ton.c
 	./a.out
 	```
-
+![C Code compiled on gcc Compiler](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/8ca03eec-c0cf-4a34-9c4b-2ff791a3b550)
 
 ### RISCV based LAB
 We have to do the same compilation of our code but this time using RISCV gcc compiler. Follow the given steps:  
@@ -350,7 +350,7 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 	```
 	cat sum_1ton.c
 	```
-
+![cat Command](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/a272d8d0-63e5-4f00-9899-2223402be21d)
 
 2. Using the **cat** command, the entire C code will be displayed on the terminal. Now run the following command to compile the code in riscv64 gcc compiler:  
 	```
@@ -360,7 +360,7 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 	```
 	riscv64-unknown-elf-objdump -o sum_1ton.o
 	```
-
+![Objdump using -O1 format](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/dbf50220-d897-4b69-b33d-d0201fddb4fb)
 
 4. The Assembly Language code of our C code will be displayed on the terminal. Type ```/main``` to locate the main section of our code.  
 
