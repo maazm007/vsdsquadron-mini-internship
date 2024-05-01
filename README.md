@@ -8,10 +8,12 @@ The program is based on the RISC-V architecture and uses open-source tools to te
 **College:** KIET Group of Institutions  
 **Email ID:** maazms999@gmail.com  
 **GitHub Profile:** [maazm007](https://github.com/maazm007?tab=repositories)
+**LinkedIN Profile:**[maazm-ece-vlsi]()
 
 ----------------------------------------------------------------------------------------------------------------
 
 ##  Task 1
+
 **1. Install Ubuntu 20.04 LTS on Oracle Virtual Machine Box**
 
 ![Ubuntu and VMBox Installation](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/11c35aff-f587-40f5-a7d2-683dbf0784d4)
@@ -322,6 +324,52 @@ BEQ r0, r0, 15
 **32 bits instruction :** ```0_000000_00000_00000_000_1111_0_1100011```
 
 ------------------------------------------------
+
+##  Task 3
+**Task is to refer to C based and RISCV based ab videos and execute the task of compiling the C code using gcc and riscv compiler**
+
+### C Language based LAB
+We have to follow the given steps to compile any **.c** file in our machine:  
+1. Open the bash terminal and locate to the directory where you want to create your file. Then run the following command:
+
+	```
+	gedit sum_1ton.c
+	```  
+2. This will open the editor and allows you to write into the file that you have created. You have to write the C code of printing the sum of n numbers. Once you are done with your code, press ```Ctrl + S``` to save your file, and then press ```Ctrl + W``` to close the editor.   
+3. To the C code on your terminal, run the following command:
+
+	```
+	gcc sum_1ton.c
+	./a.out
+	```
+
+
+### RISCV based LAB
+We have to do the same compilation of our code but this time using RISCV gcc compiler. Follow the given steps:  
+1. Open the terminal and run the given command:  
+	```
+	cat sum_1ton.c
+	```
+
+
+2. Using the **cat** command, the entire C code will be displayed on the terminal. Now run the following command to compile the code in riscv64 gcc compiler:  
+	```
+	riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum_1ton.o sum_1ton.c
+	```
+3. Open a new terminal and run the given command:  
+	```
+	riscv64-unknown-elf-objdump -o sum_1ton.o
+	```
+
+
+4. The Assembly Language code of our C code will be displayed on the terminal. Type ```/main``` to locate the main section of our code.  
+
+
+### *Descriptions of the keyword used in above command*  
+* **-mabi=lp64:** This option specifies the ABI (Application Binary Interface) to use ```lp64```, which is for 64-bit integer, long and pointer size. This ABI is used for 64-bit RISCV architecture.  
+* **-march=rv64i:** This option specifies the architecture that we use, which is rv64i, indicates the 64-bit RISCV base integer instruction set. This also confirms the targetting of 64-bit architecture.
+
+
 
 
 
