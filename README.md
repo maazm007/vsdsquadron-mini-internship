@@ -56,6 +56,7 @@ $ sudo make install
 
 ### What is GTKWave?
 > GTKWave is a free, lightweight waveform viewer that's used to display simulation output. It's based on the GTK library and supports VCD and LXT formats for signal dumps. A waveform viewer that allows for the visualization of simulation outputs, facilitating the analysis of digital signals.  
+
 *Use the following command to install GTKWave*  
 ```  
 $ sudo apt update
