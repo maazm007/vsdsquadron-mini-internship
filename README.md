@@ -347,16 +347,19 @@ We have to follow the given steps to compile any **.c** file in our machine:
 ### RISCV based LAB
 We have to do the same compilation of our code but this time using RISCV gcc compiler. Follow the given steps:  
 1. Open the terminal and run the given command:  
+
 	```
 	cat sum_1ton.c
 	```
 ![cat Command](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/a272d8d0-63e5-4f00-9899-2223402be21d)
 
 2. Using the **cat** command, the entire C code will be displayed on the terminal. Now run the following command to compile the code in riscv64 gcc compiler:  
+
 	```
 	riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum_1ton.o sum_1ton.c
 	```
-3. Open a new terminal and run the given command:  
+3. Open a new terminal and run the given command:    
+
 	```
 	riscv64-unknown-elf-objdump -o sum_1ton.o
 	```
