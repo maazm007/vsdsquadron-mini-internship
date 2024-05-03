@@ -442,14 +442,16 @@ And to compile the code using **riscv compiler**, use the following command:
 ```
 spike pk sum_1ton.o
 ```  
-
+![Spike Simulation](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/cc8a2bce-2d08-473d-9a7b-8c29e62af2e6)
 
 #### Following are the snapshots of RISCV Objdump with **-O1** and **-Ofast** options  
 RISCV Objdump with -O1 option  
 
+![Objdump in -O1](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/b51c1c23-46da-466f-bf68-e77df442d9d0)
 
 RISCV Objdump with -Ofast option  
 
+![Objdump in -Ofast](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/cd08a920-dbf5-4b8e-8b11-12b9ed02e40e)
 
 ### Debugging the Assembly Language Program of  ```sum_1ton.c```  
 * Open the **Objdump** of code by using the following command  
@@ -461,7 +463,9 @@ $ riscv64-unknown-elf-objdump -d sum_1ton.o | less
 $ spike -d pk sum_1ton.o
 ```
 * The debugger will be opened in the terminal. Now, debugging operations can be performed as shown in the following snapshot.
-	
+
+![Debugging](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/d02d0ccc-3501-4125-87a4-05b0ff9ec8bf)
+
 
 
 
