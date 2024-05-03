@@ -24,12 +24,23 @@ The program is based on the RISC-V architecture and uses open-source tools to te
 > The RISC-V GNU Compiler Toolchain is a free and open source cross-compiler for C and C++. It supports two build modes: Generic ELF/Newlib and Linux-ELF/glibc. The toolchain can be used to create assembly instructions and sequences for execution in a simulator and target FPGA  
 
 *Use the following command to install GNU Toolchain*
-```
+```  
+$ sudo apt install git  
 $ git clone https://github.com/riscv/riscv-gnu-toolchain
-$ sudo apt-get install autoconf automake autotools-dev curl python3 python3-pip libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev ninja-build git cmake libglib2.0-dev libslirp-dev
-$ ./configure --prefix=/opt/riscv
-$ make linux
+$ sudo apt-get install autoconf automake autotools-dev curl python3 python3-pip libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev ninja-build git cmake libglib2.0-dev libslirp-dev  
+$ mkdir /opt/riscv
+$ ./configure --prefix=/opt/riscv --with-arch=rv64i --with-abi=lp64 --enable-multilib
+$ sudo make
 ```
+Now add ```/opt/riscv/bin``` to **PATH**  
+```
+$ gedit ~/.bashrc  
+````  
+Add the line ```export PATH="$PATH:/opt/riscv/bin"``` in the end of file and save it. After that run the following command:  
+```
+$ source ~/.bashrc
+```
+
 ![RISC-V GNU Toolchain Installation](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/2ca2294c-28f5-43dd-bf9d-41abf33c9d02)
 
 **3. Install ```Yosys Open SYnthesis Suite```**
@@ -50,6 +61,7 @@ $ make config-gcc
 $ make 
 $ sudo make install  
 ```
+
 ![Yosys Installation](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/a6c0eddb-fad4-4cd2-8bf6-7f4bc2b20b22)
 
 **4. Install ```GTKwave``` waveform viewer**
@@ -62,6 +74,7 @@ $ sudo make install
 $ sudo apt update
 $ sudo apt install gtkwave  
 ```
+
 ![gtkwave Installation](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/11156322-7ae3-4cea-9e09-b7952764df28)
 
 **5. Install ```Icarus Verilog``` open source tool for simulation**
@@ -73,6 +86,7 @@ $ sudo apt install gtkwave
 ```  
 $ sudo apt-get install iverilog
 ```
+
 ![iverilog Installation](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/0c3be648-2f4f-48d3-bb53-45bfc56ba9b2)
 
 ------------------------------------------------------------------------------------------------------------------
@@ -361,7 +375,7 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 3. Open a new terminal and run the given command:    
 
 	```
-	riscv64-unknown-elf-objdump -o sum_1ton.o
+	riscv64-unknown-elf-objdump -d sum_1ton.o
 	```
 ![Objdump using -O1 format](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/dbf50220-d897-4b69-b33d-d0201fddb4fb)
 
@@ -371,9 +385,83 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 ### *Descriptions of the keyword used in above command*  
 * **-mabi=lp64:** This option specifies the ABI (Application Binary Interface) to use ```lp64```, which is for 64-bit integer, long and pointer size. This ABI is used for 64-bit RISCV architecture.  
 * **-march=rv64i:** This option specifies the architecture that we use, which is rv64i, indicates the 64-bit RISCV base integer instruction set. This also confirms the targetting of 64-bit architecture.  
-* **riscv-objdump:** A tool for disassembling RISC-V binaries, providing insights into the code structure and helping in debugging.
+* **riscv-objdump:** A tool for disassembling RISC-V binaries, providing insights into the code structure and helping in debugging.  
 
-.
+-------------------------------------------------
+
+##  Task 4
+**Performing SPIKE Simulation and Debugging the C code with Interactive Debugging Mode using Spike**  
+
+#### *First of all, let's install the required tools and libraries*  
+  
+### What is SPIKE in RISCV?
+> * A RISC-V ISA is a simulator, enabling the testing and analysis of RISC-V programs without the need for actual hardware.  
+> * Spike is a free, open-source C++ simulator for the RISC-V ISA that models a RISC-V core and cache system. It can be used to run programs and a Linux kernel, and can be a starting point for running software on a RISC-V target.  
+
+*Use the following command to install SPIKE in your machine*  
+```
+$ git clone https://github.com/riscv/riscv-isa-sim.git  
+$ cd riscv-isa-sim  
+$ mkdir build  
+$ cd build  
+$ sudo apt-get install device-tree-compiler // to install the missing dependencies   
+$ sudo apt-get install libboost-all-dev // to install the libboost library
+$ ../configure --prefix=/opt/riscv  
+$ make  
+$ sudo make install  
+$ sudo apt update  
+$ sudo apt install g++-8
+$ make CXX=g++-8  
+$ echo 'export PATH=$PATH:/opt/riscv/bin' >> ~/.bashrc
+$ source ~/.bashrc  
+```  
+  
+### What is pk (Proxy Kernel)?  
+> * The RISC-V Proxy Kernel, pk , is a lightweight application execution environment that can host statically-linked RISC-V ELF binaries.  
+> * A Proxy Kernel in the RISC-V ecosystem simplifies the interaction between complex hardware and the software running on it, making it easier to manage, test, and develop software and hardware projects.  
+
+*Use the following command to install **pk** in your machine*  
+```
+Make sure you are on home directory  
+$ git clone https://github.com/riscv/riscv-pk.git  
+$ cd riscv-pk  
+$ mkdir build  
+$ cd build  
+$ ../configure --prefix=/opt/riscv --host=riscv64-unknown-elf --with-arch=rv64gc  
+$ make  
+$ sudo make install  
+```  
+
+### Testing the SPIKE Simulator  
+The target is to run the ```sum_1ton.c``` code using both ```gcc compiler``` and ```riscv compiler```, and both of the compiler must display the same output on the terminal. So to compile the code using **gcc compiler**, use the following command:  
+```
+gcc sum_1ton.c  
+./a.out
+```
+And to compile the code using **riscv compiler**, use the following command:  
+```
+spike pk sum_1ton.o
+```  
+
+
+#### Following are the snapshots of RISCV Objdump with **-O1** and **-Ofast** options  
+RISCV Objdump with -O1 option  
+
+
+RISCV Objdumo with -Ofast option  
+
+
+### Debugging the Assembly Language Program of  ```sum_1ton.c```  
+* Open the **Objdump** of code by using the following command  
+```
+$ riscv64-unknown-elf-objdump -d sum_1ton.o | less  
+```
+* Open the debugger in another terminal by using the command  
+```
+$ spike -d pk sum_1ton.o
+```
+* The debugger will be opened in the terminal. Now, debugging operations can be performed as shown in the following snapshot.
+	
 
 
 
