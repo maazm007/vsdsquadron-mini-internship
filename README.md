@@ -398,7 +398,7 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 > * A RISC-V ISA is a simulator, enabling the testing and analysis of RISC-V programs without the need for actual hardware.  
 > * Spike is a free, open-source C++ simulator for the RISC-V ISA that models a RISC-V core and cache system. It can be used to run programs and a Linux kernel, and can be a starting point for running software on a RISC-V target.  
 
-*Use the following command to install SPIKE in your machine*  
+*Use the following command to install **SPIKE** in your machine*  
 ```
 $ git clone https://github.com/riscv/riscv-isa-sim.git  
 $ cd riscv-isa-sim  
@@ -448,7 +448,7 @@ spike pk sum_1ton.o
 RISCV Objdump with -O1 option  
 
 
-RISCV Objdumo with -Ofast option  
+RISCV Objdump with -Ofast option  
 
 
 ### Debugging the Assembly Language Program of  ```sum_1ton.c```  
@@ -456,7 +456,7 @@ RISCV Objdumo with -Ofast option
 ```
 $ riscv64-unknown-elf-objdump -d sum_1ton.o | less  
 ```
-* Open the debugger in another terminal by using the command  
+* Open the debugger in another terminal by using the following command  
 ```
 $ spike -d pk sum_1ton.o
 ```
