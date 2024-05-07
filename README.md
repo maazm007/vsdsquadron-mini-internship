@@ -255,18 +255,18 @@ XOR r10, r1, r4
 
 ----------------------------------------------
 ```
-SLT r1, r2, r4
+SLT r11, r2, r4
 ```
 > * Since the logical operation is performed on registers, hence this instruction belongs to R-type instruction set.
 > * r1 is the destination register that sets to 1, if r2 is less than r4, else 0 if r2 is greater than r4.
 > * Opcode for SLT = 0110011  
-> rd = r1 = 00001  
+> rd = r1 = 01011  
 > rs1 = r2 = 00010  
 > rs2 = r4 = 00100  
 > func3 = 010  
 > func7 = 0000000  
 
-**32 bits instruction :** ```0000000_00100_00010_010_00001_0110011```
+**32 bits instruction :** ```0000000_00100_00010_010_01011_0110011```
 
 ------------------------------------------------
 ```
@@ -280,7 +280,7 @@ ADDI r12, r4, 5
 > imm[11:0] = 5 = 000000000101  
 > func3 = 000  
 
-**32 bits instruction :** ```000000000000101_00100_000_01100_0010011```
+**32 bits instruction :** ```000000000101_00100_000_01100_0010011```
 
 ------------------------------------------------
 ```
@@ -473,7 +473,78 @@ $ spike -d pk sum_1ton.o
 ```
 * The debugger will be opened in the terminal. Now, debugging operations can be performed as shown in the following snapshot.
 
-![Debugging](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/d02d0ccc-3501-4125-87a4-05b0ff9ec8bf)
+![Debugging](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/d02d0ccc-3501-4125-87a4-05b0ff9ec8bf) 
+
+----------------------------------------
+
+##  Task 5
+**By making use of RISCV Core Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms**  
+  
+> [!NOTE]  
+> *Since the designing of RISCV Architecture and writing it's testbench is not the part of this Research Internship, so we will use the Verilog Code and Testbench of RISCV that has already been designed. The reference GitHub repository is : [iiitb_rv32i](https://github.com/vinayrayapati/rv32i/)*    
+  
+### Steps to perform functional simulation of RISCV  
+1. Create a new directory with your name ```mkdir <your_name>```
+2. Create two files by using ```touch``` command as ```maazm_rv32i.v``` and ```maazm_rv32i_tb.v```  
+3. Copy the code from the reference github repo and paste it in your verilog and testbench files  
+  
+  
+4. To run and simulate the verilog code, enter the following command:  
+	```
+	$ iverilog -o maazm_rv32i maazm_rv32i.v maazm_rv32i_tb.v
+	$ ./maazm_rv32i
+	```
+5. To see the simulation waveform in GTKWave, enter the following command:
+	```
+	$ gtkwave maazm_rv32i.vcd
+	```
+
+
+6. The GTKWave will be opened and following window will be appeared  
+  
+  
+  
+All the instructions in the given verilog file is hard-coded. Hard-coded means that instead of following the RISCV specifications bit pattern, the designer has hard-coded each instructions based on their own pattern. Hence the 32-bits instruction that we generated in Task-2 will not match with the given instruction. Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
+  
+|  **Operation**  |  **RISCV ISA**  |  **Hardcoded ISA**  |  
+|  :----:  |  :----:  |  :----:  |  
+|  ADD R6, R2, R1  |  32'h00110333  |  32'h02208300  |  
+|  SUB R7, R1, R2  |  32'h402083b3  |  32'h02209380  |  
+|  AND R8, R1, R3  |  32'h0030f433  |  32'h0230a400  |  
+|  OR R9, R2, R5  |  32'h005164b3  |  32'h02513480  |  
+|  XOR R10, R1, R4  |  32'h0040c533  |  32'h0240c500  |  
+|  SLT R1, R2, R4  |  32'h0045a0b3  |  32'h02415580  |  
+|  ADDI R12, R4, 5  |  32'h004120b3  |  32'h00520600  |  
+|  BEQ R0, R0, 15  |  32'h00000f63  |  32'h00f00002  |   
+  
+
+### *Analysing the Output Waveform of various instructions that we have covered in TASK-2*  
+**```Instruction 1: ADD R6, R2, R1```**  
+  
+
+**```Instruction 2: SUB R7, R1, R2```**  
+  
+
+**```Instruction 3: AND R8, R1, R3```**  
+
+
+**```Instruction 4: OR R9, R2, R5```**  
+
+
+**```Instruction 5: XOR R10, R1, R4```**  
+
+
+**```Instruction 6: SLT R1, R2, R4```**  
+
+
+**```Instruction 7: ADDI R12, R4, 5```**  
+
+
+**```Instruction 8: BEQ R0, R0, 15```**  
+  
+
+
+
 
 
 
