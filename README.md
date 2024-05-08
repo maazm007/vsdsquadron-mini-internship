@@ -1,4 +1,4 @@
-#  VSDSquadron Mini Internship 2024
+#  VSDSquadron Reseacrh Internship 2024
 
 The program is based on the RISC-V architecture and uses open-source tools to teach people about VLSI chip design and RISC-V. The instructor for this internship is Kunal Ghosh Sir.
 
@@ -12,7 +12,8 @@ The program is based on the RISC-V architecture and uses open-source tools to te
 
 ----------------------------------------------------------------------------------------------------------------
 
-##  Task 1
+<details>
+<summary>**Task 1:** Task is to install all the essential tools required for this internship such as Ubuntu on VMBox, GNU Toolchain, GTKWave, Yosys and iVerilog simulator**</summary> 
 
 **1. Install Ubuntu 20.04 LTS on Oracle Virtual Machine Box**
 
@@ -88,6 +89,7 @@ $ sudo apt-get install iverilog
 ```
 
 ![iverilog Installation](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/0c3be648-2f4f-48d3-bb53-45bfc56ba9b2)
+</details>
 
 ------------------------------------------------------------------------------------------------------------------
 
@@ -337,7 +339,21 @@ BEQ r0, r0, 15
 
 **32 bits instruction :** ```0_000000_00000_00000_000_1111_0_1100011```
 
-------------------------------------------------
+------------------------------------------------  
+```
+LW r13, r1, 2
+```
+> * LW stands for Load Word. Word is equal to 32 bits or 4 bytes. Since there is an immediate value given in the instruction which helps to calculate the address of memory from where we have to fetch the data, hence this instruction belongs to I-type.  
+> * r13 is the destination register that will hold the value fetched from the memory location calculated by using (address value stored in r1 + immediate value)  
+> * Opcode for LW = 0000011  
+> rd = r13 = 01101  
+> rs1 = r1 = 00001  
+> imm[11:0] = 000000000010  
+> func3 = 010  
+  
+**32 bits instruction :** ```000000000010_00001_010_01101_0000011```  
+
+---------------------------------------------------
 
 ##  Task 3
 **Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler**
@@ -478,7 +494,7 @@ $ spike -d pk sum_1ton.o
 ----------------------------------------
 
 ##  Task 5
-**By making use of RISCV Core Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms**  
+**By making use of RISCV Core: Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms**  
   
 > [!NOTE]  
 > *Since the designing of RISCV Architecture and writing it's testbench is not the part of this Research Internship, so we will use the Verilog Code and Testbench of RISCV that has already been designed. The reference GitHub repository is : [iiitb_rv32i](https://github.com/vinayrayapati/rv32i/)*    
@@ -504,7 +520,11 @@ $ spike -d pk sum_1ton.o
   
   
   
-All the instructions in the given verilog file is hard-coded. Hard-coded means that instead of following the RISCV specifications bit pattern, the designer has hard-coded each instructions based on their own pattern. Hence the 32-bits instruction that we generated in Task-2 will not match with the given instruction. Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
+### All the instructions in the given verilog file is hard-coded. Hard-coded means that instead of following the RISCV specifications bit pattern, the designer has hard-coded each instructions based on their own pattern. Hence the 32-bits instruction that we generated in Task-2 will not match with the given instruction.  
+  
+
+  
+### Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
   
 |  **Operation**  |  **RISCV ISA**  |  **Hardcoded ISA**  |  
 |  :----:  |  :----:  |  :----:  |  
@@ -515,7 +535,9 @@ All the instructions in the given verilog file is hard-coded. Hard-coded means t
 |  XOR R10, R1, R4  |  32'h0040c533  |  32'h0240c500  |  
 |  SLT R1, R2, R4  |  32'h0045a0b3  |  32'h02415580  |  
 |  ADDI R12, R4, 5  |  32'h004120b3  |  32'h00520600  |  
-|  BEQ R0, R0, 15  |  32'h00000f63  |  32'h00f00002  |   
+|  BEQ R0, R0, 15  |  32'h00000f63  |  32'h00f00002  |  
+|  SW R3, R1, 2  |  32'h0030a123  |  32'h00209181  |  
+|  LW R13, R1, 2  |  32'h0020a683  |  32'h00208681  |   
   
 
 ### *Analysing the Output Waveform of various instructions that we have covered in TASK-2*  
@@ -541,6 +563,9 @@ All the instructions in the given verilog file is hard-coded. Hard-coded means t
 
 
 **```Instruction 8: BEQ R0, R0, 15```**  
+  
+  
+**```Instruction 9: BNE R0, R1, 20```**
   
 
 
