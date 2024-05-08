@@ -13,7 +13,7 @@ The program is based on the RISC-V architecture and uses open-source tools to te
 ----------------------------------------------------------------------------------------------------------------
 
 <details>
-<summary>## Task 1: Task is to install all the essential tools required for this internship such as Ubuntu on VMBox, GNU Toolchain, GTKWave, Yosys and iVerilog simulator</summary> 
+<summary>Task 1: Task is to install all the essential tools required for this internship such as Ubuntu on VMBox, GNU Toolchain, GTKWave, Yosys and iVerilog simulator</summary> 
 
 **1. Install Ubuntu 20.04 LTS on Oracle Virtual Machine Box**
 
