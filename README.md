@@ -1,4 +1,4 @@
-#  VSDSquadron Reseacrh Internship 2024
+=#  VSDSquadron Reseacrh Internship 2024
 
 The program is based on the RISC-V architecture and uses open-source tools to teach people about VLSI chip design and RISC-V. The instructor for this internship is Kunal Ghosh Sir.
 
@@ -522,11 +522,11 @@ $ spike -d pk sum_1ton.o
 
 6. The GTKWave will be opened and following window will be appeared  
   
-  
-  
+![4](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/8cc283c6-87ed-485b-86d1-cdccb2de47d6)
+ 
 #### As shown in the figure below, all the instructions in the given verilog file is hard-coded. Hard-coded means that instead of following the RISCV specifications bit pattern, the designer has hard-coded each instructions based on their own pattern. Hence the 32-bits instruction that we generated in Task-2 will not match with the given instruction.  
   
-
+<img width="304" alt="Instructions" src="https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/24cc896a-7817-4941-be7f-95d44c35d4d8">
   
 #### Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
   
@@ -547,30 +547,39 @@ $ spike -d pk sum_1ton.o
 #### *Analysing the Output Waveform of various instructions that we have covered in TASK-2*  
 **```Instruction 1: ADD R6, R2, R1```**  
   
+![ADD](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/fff34786-9f52-488b-827d-9516ba655ed1)
 
 **```Instruction 2: SUB R7, R1, R2```**  
   
+![SUB](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/a4ce7d65-1e61-4a35-9e9f-9941de9d6e19)
 
 **```Instruction 3: AND R8, R1, R3```**  
 
+![AND](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/28706b39-2cfa-4b29-b0ac-6c1bbc1cbbe9)
 
 **```Instruction 4: OR R9, R2, R5```**  
 
+![OR](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/617b18d4-35f8-42e4-8294-b8259042f1d6)
 
 **```Instruction 5: XOR R10, R1, R4```**  
 
+![XOR](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/724f6c43-6f5c-4be2-899a-061b202cbf34)
 
 **```Instruction 6: SLT R1, R2, R4```**  
 
+![SLT](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/6d0a3063-9a8c-49e2-84ab-eb8f99875d0a)
 
 **```Instruction 7: ADDI R12, R4, 5```**  
 
+![ADDI](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/d8287e99-05d4-4140-b4bc-844da65fe1c8)
 
 **```Instruction 8: BEQ R0, R0, 15```**  
   
-  
-**```Instruction 9: BNE R0, R1, 20```**
+![BEQ](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/583e69e5-88ef-4853-8a3b-a282bb8cc90f)
  
+**```Instruction 9: BNE R0, R1, 20```**
+
+![BNE](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/d09128b6-172a-4b3a-bfa6-2364142bb9f8)
 </details>
 
 --------------------------------------------------------------- 
