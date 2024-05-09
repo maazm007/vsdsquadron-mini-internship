@@ -503,10 +503,8 @@ $ spike -d pk sum_1ton.o
 <details>
 <summary><b>Task 5:</b> By making use of RISCV Core: Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms</summary>  
 <br>
-<br>
 
-> [!NOTE]    
-> *Since the designing of RISCV Architecture and writing it's testbench is not the part of this Research Internship, so we will use the Verilog Code and Testbench of RISCV that has already been designed. The reference GitHub repository is : [iiitb_rv32i](https://github.com/vinayrayapati/rv32i/)*    
+> * **NOTE:** Since the designing of RISCV Architecture and writing it's testbench is not the part of this Research Internship, so we will use the Verilog Code and Testbench of RISCV that has already been designed. The reference GitHub repository is : [iiitb_rv32i](https://github.com/vinayrayapati/rv32i/)*    
   
 ### Steps to perform functional simulation of RISCV  
 1. Create a new directory with your name ```mkdir <your_name>```
