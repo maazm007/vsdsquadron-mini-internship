@@ -596,10 +596,11 @@ $ spike -d pk sum_1ton.o
 **```Instruction 9: BNE R0, R1, 20```**
 
 ![BNE](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/d09128b6-172a-4b3a-bfa6-2364142bb9f8)
-</details>  
   
-**```Instruction 10: SLL R15, R1, R2```***  
+**```Instruction 10: SLL R15, R1, R2```**  
 
+
+</details>  
 
 --------------------------------------------------------------- 
 
