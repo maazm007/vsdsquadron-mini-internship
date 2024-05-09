@@ -96,7 +96,6 @@ $ sudo apt-get install iverilog
 
 <details>
 <summary><b>Task 2:</b> Task is to identify instruction type of all the given instructions with its exact 32 bits instruction code in the desired instruction type format</summary>
-<br>
 
 ### WHAT IS RISC-V?
 * RISC-V is an open-source instruction set architecture (ISA) that allows developers to develop processors for specific applications.  
@@ -360,7 +359,6 @@ LW r13, r1, 2
 
 <details>
 <summary><b>Task 3:</b> Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler</summary>
-<br>
 
 ### C Language based LAB
 We have to follow the given steps to compile any **.c** file in our machine:  
@@ -420,8 +418,7 @@ Here, the term **more aggressive optimization** in the context of compilers like
 -------------------------------------------------
 
 <details>
-<summary><b>Task 4:</b> Performing SPIKE Simulation and Debugging the C code with Interactive Debugging Mode using Spike</summary>
-<br>  
+<summary><b>Task 4:</b> Performing SPIKE Simulation and Debugging the C code with Interactive Debugging Mode using Spike</summary> 
 
 #### *First of all, let's install the required tools and libraries*  
   
