@@ -94,9 +94,9 @@ $ sudo apt-get install iverilog
 
 ------------------------------------------------------------------------------------------------------------------
 
-##  Task 2
-
-**Task is to identify instruction type of all the given instructions with its exact 32 bits instruction code in the desired instruction type format**
+<details>
+<summary><b>Task 2:</b> Task is to identify instruction type of all the given instructions with its exact 32 bits instruction code in the desired instruction type format</summary>
+<br>
 
 ### WHAT IS RISC-V?
 * RISC-V is an open-source instruction set architecture (ISA) that allows developers to develop processors for specific applications.  
@@ -354,10 +354,13 @@ LW r13, r1, 2
   
 **32 bits instruction :** ```000000000010_00001_010_01101_0000011```  
 
+</details>
+
 ---------------------------------------------------
 
-##  Task 3
-**Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler**
+<details>
+<summary><b>Task 3:</b> Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler</summary>
+<br>
 
 ### C Language based LAB
 We have to follow the given steps to compile any **.c** file in our machine:  
@@ -412,11 +415,13 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 > 4. **-Os:** Optimizes code for size. It enables all -O2 optimizations that do not typically increase code size.
 
 Here, the term **more aggressive optimization** in the context of compilers like GCC refers to a deeper and more complex set of transformations applied to the code in order to improve its performance and possibly reduce its size. The compiler uses more complex techniques that aims to generate faster executing code or code that occupies less memory. However, these optimizations typically increase the compilation time and can sometimes introduce bugs, making it harder to debug.
+</details>
 
 -------------------------------------------------
 
-##  Task 4
-**Performing SPIKE Simulation and Debugging the C code with Interactive Debugging Mode using Spike**  
+<details>
+<summary><b>Task 4:</b> Performing SPIKE Simulation and Debugging the C code with Interactive Debugging Mode using Spike</summary>
+<br>  
 
 #### *First of all, let's install the required tools and libraries*  
   
@@ -491,11 +496,13 @@ $ spike -d pk sum_1ton.o
 * The debugger will be opened in the terminal. Now, debugging operations can be performed as shown in the following snapshot.
 
 ![Debugging](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/d02d0ccc-3501-4125-87a4-05b0ff9ec8bf) 
+</details>
 
 ----------------------------------------
 
-##  Task 5
-**By making use of RISCV Core: Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms**  
+<details>
+<summary><b>Task 5:</b> By making use of RISCV Core: Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms</summary>
+<br>
   
 > [!NOTE]  
 > *Since the designing of RISCV Architecture and writing it's testbench is not the part of this Research Internship, so we will use the Verilog Code and Testbench of RISCV that has already been designed. The reference GitHub repository is : [iiitb_rv32i](https://github.com/vinayrayapati/rv32i/)*    
@@ -521,13 +528,13 @@ $ spike -d pk sum_1ton.o
   
   
   
-### All the instructions in the given verilog file is hard-coded. Hard-coded means that instead of following the RISCV specifications bit pattern, the designer has hard-coded each instructions based on their own pattern. Hence the 32-bits instruction that we generated in Task-2 will not match with the given instruction.  
+#### As shown in the figure below, all the instructions in the given verilog file is hard-coded. Hard-coded means that instead of following the RISCV specifications bit pattern, the designer has hard-coded each instructions based on their own pattern. Hence the 32-bits instruction that we generated in Task-2 will not match with the given instruction.  
   
 
   
-### Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
+#### Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
   
-|  **Operation**  |  **RISCV ISA**  |  **Hardcoded ISA**  |  
+|  **Operation**  |  **Standard RISCV ISA**  |  **Hardcoded ISA**  |  
 |  :----:  |  :----:  |  :----:  |  
 |  ADD R6, R2, R1  |  32'h00110333  |  32'h02208300  |  
 |  SUB R7, R1, R2  |  32'h402083b3  |  32'h02209380  |  
@@ -541,7 +548,7 @@ $ spike -d pk sum_1ton.o
 |  LW R13, R1, 2  |  32'h0020a683  |  32'h00208681  |   
   
 
-### *Analysing the Output Waveform of various instructions that we have covered in TASK-2*  
+#### *Analysing the Output Waveform of various instructions that we have covered in TASK-2*  
 **```Instruction 1: ADD R6, R2, R1```**  
   
 
@@ -567,7 +574,10 @@ $ spike -d pk sum_1ton.o
   
   
 **```Instruction 9: BNE R0, R1, 20```**
-  
+ 
+</details>
+
+--------------------------------------------------------------- 
 
 
 
