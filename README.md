@@ -1,4 +1,4 @@
-=#  VSDSquadron Reseacrh Internship 2024
+#  VSDSquadron Reseacrh Internship 2024
 
 The program is based on the RISC-V architecture and uses open-source tools to teach people about VLSI chip design and RISC-V. The instructor for this internship is Kunal Ghosh Sir.
 
@@ -526,7 +526,7 @@ $ spike -d pk sum_1ton.o
  
 #### As shown in the figure below, all the instructions in the given verilog file is hard-coded. Hard-coded means that instead of following the RISCV specifications bit pattern, the designer has hard-coded each instructions based on their own pattern. Hence the 32-bits instruction that we generated in Task-2 will not match with the given instruction.  
   
-<img width="304" alt="Instructions" src="https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/24cc896a-7817-4941-be7f-95d44c35d4d8">
+<img width="500" alt="Instructions" src="https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/24cc896a-7817-4941-be7f-95d44c35d4d8">
   
 #### Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
   
