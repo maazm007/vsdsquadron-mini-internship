@@ -599,6 +599,7 @@ $ spike -d pk sum_1ton.o
   
 **```Instruction 10: SLL R15, R1, R2```**  
 
+![SLL](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/885a63bc-485e-4594-8d15-52f2ec8da800)
 
 </details>  
 
