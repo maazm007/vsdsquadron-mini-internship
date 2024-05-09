@@ -302,7 +302,7 @@ SW r3, r1, 2
 ```
 SRL r16, r14, r2
 ```
-> * SRL means Logical Shift Right and since the operation is performed on registers, this instruction belongs to S-type instruction set.  
+> * SRL means Logical Shift Right and since the operation is performed on registers, this instruction belongs to R-type instruction set.  
 > * r16 is the destination register, in which the value stored in r14 will be written after performing logical right shift based on the number stored in r2.  
 > * Opcode for SRL = 0110011  
 > rd = r16 = 10000  
@@ -353,6 +353,20 @@ LW r13, r1, 2
   
 **32 bits instruction :** ```000000000010_00001_010_01101_0000011```  
 
+-----------------------------------------------
+```
+SLL r15, r1, r2
+```
+> * SLL means Logical Shift Left and since the operation is performed on registers, this instruction belongs to R-type instruction set.  
+> * r15 is the destination register, in which the value stored in r1 will be written after performing logical left shift based on the number stored in r2.  
+> * Opcode for SLL = 0110011  
+> rd = r15 = 01111  
+> rs1 = r1 = 00001  
+> rs2 = r2 = 00010  
+> func3 = 001  
+> func7 = 0000000  
+  
+**32 bits instruction :**```0000000_00010_00001_001_01111_0110011```   
 </details>
 
 ---------------------------------------------------
@@ -541,7 +555,9 @@ $ spike -d pk sum_1ton.o
 |  ADDI R12, R4, 5  |  32'h004120b3  |  32'h00520600  |  
 |  BEQ R0, R0, 15  |  32'h00000f63  |  32'h00f00002  |  
 |  SW R3, R1, 2  |  32'h0030a123  |  32'h00209181  |  
-|  LW R13, R1, 2  |  32'h0020a683  |  32'h00208681  |   
+|  LW R13, R1, 2  |  32'h0020a683  |  32'h00208681  |  
+|  SRL R16, R14, R2  |  32'h0030a123  |  32'h00271803  |
+|  SLL R15, R1, R2  |  32'h002097b3  |  32'h00208783  |   
   
 
 #### *Analysing the Output Waveform of various instructions that we have covered in TASK-2*  
@@ -580,7 +596,10 @@ $ spike -d pk sum_1ton.o
 **```Instruction 9: BNE R0, R1, 20```**
 
 ![BNE](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/d09128b6-172a-4b3a-bfa6-2364142bb9f8)
-</details>
+</details>  
+  
+**```Instruction 10: SLL R15, R1, R2```***  
+
 
 --------------------------------------------------------------- 
 
