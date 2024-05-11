@@ -627,6 +627,7 @@ This project involves the implementation of Full Adder combinational circuit usi
 * **Outputs:** Two LEDs are connected to display the result of Full Adder  
 * The GPIO pins are configured according to the Reference Mannual, ensuring the correct flow of signals between the components  
   
+![FA_RISCV](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/e91fafca-c9ff-4acc-b6c2-0d6028944f82)
   
 ### **Truth Table to Verify the Full Adder**  
 |  **A**  |  **B**  |  **Cin**  |  **Sum**  |  **Carry**  |
