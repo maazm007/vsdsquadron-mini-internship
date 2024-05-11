@@ -607,14 +607,13 @@ $ spike -d pk sum_1ton.o
 
 <details>
 <summary><b>Task 6:</b> Final Task of this internship is to implement any digital circuits using VSDSquadron Mini and check whether the building and uploading of C program file on RISCV processor works</summary>  
-<br>  
   
 ## Implementing Full Adder using VSDSquadron Mini  
   
-### Overview  
+### **Overview**  
 This project involves the implementation of Full Adder combinational circuit using VSDSquadron Mini, a RISCV based SoC development kit. Full Adder is a very important circuit in digital electronics, widely used in creating the design of n-bits Adder circuit. A full adder circuit is a digital circuit that adds two binary digits and a carry-in digit to produce a sum and carry-out digit. It's a central component of most digital circuits that perform addition or subtraction. This project demonstrates the practical application of digital logic and RISC-V architecture in executing arithmetic operation, reflecting the process of reading and writing of binary data through GPIO pins, implementing the operation of full adder through digital logic gates which is simulated using PlatformIO IDE and thus displaying the outputs using LEDs.  
   
-### Components Required  
+### **Components Required**  
 * VSDSquadron Mini  
 * Push Buttons for Input of binary data  
 * 2 LEDs for displaying the Output  
@@ -623,13 +622,13 @@ This project involves the implementation of Full Adder combinational circuit usi
 * VS Code for Software Development  
 * PlatformIO multi framework professional IDE  
   
-### Hardware Connections  
+### **Hardware Connections**  
 * **Input:** Three input of single bit are connected to the GPIO pins of VSDSquadron Mini via push buttons mounted on the breadboard.  
 * **Outputs:** Two LEDs are connected to display the result of Full Adder  
 * The GPIO pins are configured according to the Reference Mannual, ensuring the correct flow of signals between the components  
   
   
-### Truth Table to Verify the Full Adder  
+### **Truth Table to Verify the Full Adder**  
 |  **A**  |  **B**  |  **Cin**  |  **Sum**  |  **Carry**  |
 |  :----:  |  :----:  |  :----:  |  :----:  |  :----:  |
 |  0  |  0  |  0  |  0  |  0  |
@@ -737,8 +736,9 @@ int main()
 [Video Link](https://drive.google.com/file/d/1CI1DD0B-6AT6_vcHkUMITU1bolnwix8V/view?usp=sharing)
   
 ### Acknowledgement  
-> *I would like to thank Kunal Ghosh Sir for this amazing internship experience on RISCV Architecture using VSDSquadron Mini. I was really passionate about diving into the world of RISCV, and here i got the kickstart. I had an amazing experience throughout this internship program. Thanks a lot VLSI System Design for launching such a phoenomenal research internship
-  
+> *I would like to thank Kunal Ghosh Sir for this amazing internship experience on RISCV Architecture using VSDSquadron Mini. I was really passionate about diving into the world of RISCV, and here i got the kickstart. I had an amazing experience throughout this internship program. Thanks a lot VLSI System Design for launching such a phoenomenal research internship*
+
+</details>  
 
  
 
