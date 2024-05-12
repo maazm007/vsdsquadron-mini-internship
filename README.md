@@ -743,6 +743,7 @@ int main()
 <details>
 <summary>Acknowledgement</summary>
 <br>
+
 >*I would like to thank Kunal Ghosh Sir for this amazing internship experience on RISCV Architecture using VSDSquadron Mini. I was really passionate about diving into the world of RISCV, and here i got the kickstart. I had an amazing experience throughout this internship program. Thanks a lot VLSI System Design for launching such a phoenomenal research internship*  
 
 </details>
