@@ -735,11 +735,16 @@ int main()
 
 ### Application Video  
 [Video Link](https://drive.google.com/file/d/1CI1DD0B-6AT6_vcHkUMITU1bolnwix8V/view?usp=sharing)
-  
-### Acknowledgement  
-> *I would like to thank Kunal Ghosh Sir for this amazing internship experience on RISCV Architecture using VSDSquadron Mini. I was really passionate about diving into the world of RISCV, and here i got the kickstart. I had an amazing experience throughout this internship program. Thanks a lot VLSI System Design for launching such a phoenomenal research internship*
 
-</details>  
+</details>
+
+--------------------------------------------------------------
+
+<details>
+<summary>Acknowledgement</summary>
+> *I would like to thank Kunal Ghosh Sir for this amazing internship experience on RISCV Architecture using VSDSquadron Mini. I was really passionate about diving into the world of RISCV, and here i got the kickstart. I had an amazing experience throughout this internship program. Thanks a lot VLSI System Design for launching such a phoenomenal research internship*  
+
+</details>
 
 
 
